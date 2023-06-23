@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+    margin:0;
+    font-family:Arial;
+    border:border-box;
+}
+.navbar{
+    height: 60px;
+    background-color:#0F1111;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav-logo{
+    height: 50px;
+    width: 100px;
+}
+.logo{
+    background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBsYoGOedDCFpWB9nZjSlKMlNKJIY-nReRCgEzezUVIu8Vx5vrxd3XMGdEDqUwl4dbtK-Cw19_YR2KKW-xfiXTDGlA2xr6psIeMATEvRVrOYrfGbHV0A69ujUahkaZwbxviysipAekcHSd6njiOmp-yAX8NT6N9VGBvwr0_3f7nlHASMSEGVgPCA2sCHKJ/s1920/amazon_logo.png);
+    background-size: cover;
+    height: 50px;
+    width: 100%;
+}
+.border{
+     border:2px solid transparent;
+}
+.border:hover{
+    border:2px solid white;
+}
+.add-first{
+    color:#cccccc;
+    font-size: 0.85rem;
+    margin-left: 15px;
+}
+.add-second{
+    font-size: 1rem;
+    margin-left: 3px;
+}
+.add-icon{
+    display: flex;
+    align-items: center;
+    
+}
+.nav-search{
+    width:620px;
+    height: 40px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 4px;
+    border:2px solid transparent;
+    
+}
+
+.nav-search:hover{
+    border:2px solid orange;
+}
+.search-select{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+    background-color: #f3f3f3;
+    height: 40px;
+    width: 50px;
+    text-align: center;
+}
+.search-input{
+    height: 40px;
+    width:100%;
+    font-size: 1rem;
+    border: none;
+    padding:0px;
+}
+.search-icon{
+    width:45px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    background-color: #febd68;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #0F1111;
+}
+.search-country{
+    border: none;
+    background-color: #0F1111;
+    color: #f3f3f3;
+    height: 40px;
+    width: 50px;
+    text-align: center;
+}
+.language{
+    display: flex;
+}
+.nav-first{
+    font-size: 0.7rem;
+
+}
+.nav-second{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+.nav-signin{
+    padding-left: 20px;
+}
+.nav-return{
+    padding-left: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+.cart i {
+    font-size: 1.5rem;
+}
+.cart{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.panel{
+    height: 40px;
+    background-color: #222f3d;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.panel-ops p{
+    display: inline;
+    margin-left: 15px;
+    
+}
+.panel-ops button{
+    background-color: #222f3d;
+    color: white;
+    border:none;
+    padding: none;
+    margin: none;
+}
+.panel-ops{
+    width: 70%;
+    font-size: 0.85rem;
+}
+.panel-deals{
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.hero-section{
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijt9R14A-hn08aPE-nIfprvGlv8h79W9yVwLUhRV1cJlnVRPeqfVagrU9GzlX9wB8JFqkwihdBbLqdLt5lOQ2_YcGEno20sfL4Cy3D9ilf3DimsX5SfC2Wbg-wGIWup13frSXKApRUpjXu7NtLES99awKeEsf1jFUpemB2jpTMWMQHzYdmNJKH7xJhs2gn/s3000/hero_image.jpg");
+    height: 350px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.hero-message{
+    background-color: white;
+    height: 40px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+}
+.hero-message a{
+    color: #007185;
+}
+.shop-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #d9dfdd;
+
+}
+.box{
+    height: 400px;
+    width: 23%;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 15px;
+}
+.box-img{
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    margin-bottom: 1rem ;
+}
+.box-content{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.footer{
+    margin-top: 50px;
+}
+.button{
+    width: 100%;
+    height: 50px;
+    background-color: #222f3d;
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+.button a{
+    color:white
+}
+
+.footpanel2{
+    background-color: #222f3d;
+    color: white;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul{
+    margin-top: 20px;
+}
+ul a{
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #DDDDDD;
+}
+ul p{
+    font-weight: 600;
+}
+
+.footpanel3{
+    background-color: #222f3d;
+    border-top: 0.5px solid #d9dfdd ;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo1{
+    background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBsYoGOedDCFpWB9nZjSlKMlNKJIY-nReRCgEzezUVIu8Vx5vrxd3XMGdEDqUwl4dbtK-Cw19_YR2KKW-xfiXTDGlA2xr6psIeMATEvRVrOYrfGbHV0A69ujUahkaZwbxviysipAekcHSd6njiOmp-yAX8NT6N9VGBvwr0_3f7nlHASMSEGVgPCA2sCHKJ/s1920/amazon_logo.png);
+    background-size: cover;
+    height: 50px;
+    width: 100px;
+}
+.language-footer{
+    width: 100px;
+    background-color:#222f3d ;
+    color: white;
+}
+.logo{
+    background-color: #0F1111;
+    border: none;
+}
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <button onclick= "homepage()" class="logo">
+                </button>
+            </div>
+            <div class="nav-address border">
+                <p class="add-first">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-second">India</p>
+                </div>
+            </div>
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                    <option>Home & Kitchen</option>
+                    <option>Beauty & Personal Car</option>
+                    <option>Clothing, Shoes & Jewelry</option>
+                    <option>Toys & games</option>
+                    <option>Health, Household & Baby Care</option>
+                    <option>Baby</option>
+                    <option>Electronics</option>
+                    <option>Sports & outdoors</option>
+                    <option>Pet Supplies</option>
+                    <option>Office Supplies</option>
+                </select >
+                <input placeholder="Search Amazon" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="language ">
+                <div class="add-icon">
+                    <i class="fa-solid fa-language"></i>
+                <select class="search-country">
+                    <option>EN </option>
+                    <option>hindi</option>
+                    <option>French</option>
+                    <option>Chinese</option>
+                    <option>Arabic</option>
+                    <option>Roman</option>
+                </select >
+            </div>
+            <div class="nav-signin border">
+                <p><span class="nav-first">Hello, Sign in</span></p>
+                <p class="nav-second"> Accounts and Lists</p>
+            </div> 
+            <div class="nav-return border">
+                <p><span class="nav-first">Returns</span></p>
+                <p class="nav-second"> & Orders</p>
+            </div>   
+            </div>
+            <div class="cart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-all">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+            <div class="panel-ops">
+                <button onclick="redirectToWebsite()">Registry</button>
+                <button onclick="redirectToWebsite1()">Tutorials</button>
+                <button onclick="redirectToWebsite2()">Feedback </button>
+                <button onclick="redirectToWebsite3()">GiftCard</button>  
+                <p>Sell</p>
+            </div>
+            <div class="panel-deals">
+                Shop Deals in Electronics
+            </div>
+        </div>
+    </header>
+    <div class="hero-section">
+        <div class="hero-message">
+            <p>You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <a href="https://www.amazon.in/">Click here to go to amazon.in</a></p>
+        </div>
+    </div>
+
+    <div class="shop-section">
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Clothes</h2>
+                <div class="box-img"style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjswgzdjIliCO1Fpmo45ORhXBD1b1dsiX1Ze33YKMWeZ4nRh22vUy90VRcbRnJktVS-gRoMcml1MIPL1ya5Z6A_Jwzatt_iTT2ymvdd5sqE_IAOq7lIAPJ1oKBqu9NrhYo5m8q4r00fyJeEdwq2rDxuIBis-tF_BAGPOa7GVT-Kxs7mSKNchU7aglwqkfn2/s372/box1_image.jpg')"></div>
+                <a href="https://www.amazon.in/s/ref=nb_sb_noss?url=search-alias%3Dfashion&field-keywords=&crid=AAAAOV3MLQ1&sprefix=%2Cfashion%2C246">see more</a>
+            </div>
+        </div>
+        <div class="box2 box">
+            <div class="box-content">
+                <h2>Health and Personal Care</h2>
+                <div class="box-img"style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgi8Xf-KpprYLWYv-WWa5KPoelzJhrAJUvkp-FHpIHGu7Ww32FkWnmqSXCpga6ZpF5N5beZmogs-Iw7Bj8icCM5hdI8OKd28TfzMExCIKja-GR425aLVwJvko9-CU7Z9fbg_7WfSh-KPYNzEQ_PNoGQSkfWdpfGhzPcAb48a-TAYizDEzEqUx3PRACPxIn_/s758/box2_image.jpg')"></div>
+                <a href="https://www.amazon.in/s/ref=nb_sb_noss?url=search-alias%3Dhpc&field-keywords=&crid=JQM4DA680VV7&sprefix=%2Chpc%2C234">see more</a>
+            </div>
+        </div>
+        <div class="box3 box">
+            <div class="box-content">
+                <h2>Home Decor</h2>
+                <div class="box-img"style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuBoMTIwG8AxFUnjUJCbv1_aLOujRRxfKAEqmyBTEA5d3vfiAQdgHOIpPf9iZYQ7MaYaz0C4_Sc9J1PIHn1AgJm0Rj75kB-wyXR9AVThbY2mCtl0utz9wk67g7dIv4wgo9LJERqxN8wpAoozPcc9HZuiJ375rUE3vO5JrxW7OU1LAg2YrUWyie9I3xBTYx/s372/box3_image.jpg')"></div>
+                <a href="https://www.amazon.in/b?node=976442031">see more</a>
+            </div>
+        </div>
+        <div class="box4 box">
+            <div class="box-content">
+                <h2>Smart Phones</h2>
+                <div class="box-img"style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlEwLfgAb_uD84lVeZSsRNwlGkV4NbTh8Cbx-uWUupIgy2eRuvub9tsNxOW2LidBirGNTYiP5HswqGWGyNLdwC0v5ZPux_eCmzOkZjC1phEHrBIee93S1K5koxbsAeX_Q1llmaMqhR99AoSIHr2WY92NJCblZYoEWrWpd0Hqp-pTgZv7KUeQe_2VFxmXhv/s400/box4_image.jpg')"></div>
+                <a href="https://www.amazon.in/b?node=976419031">see more</a>
+            </div>
+        </div>
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Beauty and Makeup</h2>
+                <div class="box-img"style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEs183Gp0t4n1vIyVf4qzVEmDT3Pkur7YQ6rnnIV4m0xa6jS6cnWVJThWjFw_vzGwl18UDX-TfSl4LlorBVxB4mWUYHQDXU15OmwyMo03RiLVW571Mh2KjiqUBsLVT85_fVnnRrGZYe7NdlqiYDmflx8iMM7aWh_tSy1u3_2j0ZD7xXLtGKdt4vneIrpps/s758/box5_image.jpg')"></div>
+                <a href="https://www.amazon.in/s/ref=nb_sb_noss?url=search-alias%3Dbeauty&field-keywords=&crid=1EUGS3SD2GD9Q&sprefix=%2Cbeauty%2C226">see more</a>
+            </div>
+        </div>
+        <div class="box2 box">
+            <div class="box-content">
+                <h2>Pet Care</h2>
+                <div class="box-img"style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiTxIj1MCzIvNE_528KhqSHQSw4npHByrmer1ooAV2sbe99Fcto4s5fFXusptQnBMw34zprPVq-6EF6YWzEdYe03iO__pTiiZbIcwXYPbK_NMDha_i5ziGB27-jWNuZCRibMmBKwxZi7hpqBGBR3WxDfXqwp2bInEHwzoKC6xoBcODIzD130DyF6m-6gTfc/s758/box6_image.jpg')"></div>
+                <a href="https://www.amazon.in/s/ref=nb_sb_noss?url=search-alias%3Dpets&field-keywords=&crid=RQ43MKT7UGD8&sprefix=%2Cpets%2C241">see more</a>
+            </div>
+        </div>
+        <div class="box3 box">
+            <div class="box-content">
+                <h2>Toys and Kids</h2>
+                <div class="box-img"style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8Szi7KlJTo9N38G2UZF-Hx5WJOT09LBmYYbQQWZPdBEeif_Vv8etJoQtA5wH-yLBXNAh7unKpp2VQvkiwL5wAy1Ts9schXf_7AXuWX-SppbrifAeTc5n8LY4tgi6UAbgyi2bQnEZxiGxwni1W9AuC9eLFRK8625_qTvPgTEkKHzbJnA4wqNGUX0TuvNqP/s758/box7_image.jpg')"></div>
+                <a href="https://www.amazon.in/b?node=1350380031">see more</a>
+            </div>
+        </div>
+        <div class="box4 box">
+            <div class="box-content">
+                <h2>Fashion</h2>
+                <div class="box-img"style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsJcKx3tnfzgdJe-QaNdYHaHs8OBzsqsv4_3hzcHKCYcd03CUfnlkAtAIYK8HytPXz_X5sey1jMQaylSaFSKU_93U8ysIBlGqBYllF291NscX4XDku-ZNPlrHO8eb1PS11CEQgQ-17_3Cs4t_bitwssNWbeMKlEYDs2eQfZi_PsTpP4tMY3uTGoBzXT7Wo/s758/box8_image.jpg')"></div>
+                <a href="https://www.amazon.in/s/ref=nb_sb_noss?url=search-alias%3Dfashion&field-keywords=&crid=AAAAOV3MLQ1&sprefix=%2Cfashion%2C246">see more</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="back-to-top">
+            <button class="button" > <a href="#">Back to top</a></button>
+            <div class="footpanel2">
+                <ul>
+                    <p>Get to Know Us</p>
+                        <a>Careers</a>
+                        <a>Blog</a>
+                        <a>About Amazon</a>
+                        <a>Investor Relations</a>
+                        <a>Amazon Devices</a>
+                        <a>Amazon Science</a>
+                </ul>
+                <ul>
+                    <p>Get to Know Us</p>
+                        <a>Careers</a>
+                        <a>Blog</a>
+                        <a>About Amazon</a>
+                        <a>Investor Relations</a>
+                        <a>Amazon Devices</a>
+                        <a>Amazon Science</a>
+                </ul>
+                <ul>
+                    <p>Get to Know Us</p>
+                        <a>Careers</a>
+                        <a>Blog</a>
+                        <a>About Amazon</a>
+                        <a>Investor Relations</a>
+                        <a>Amazon Devices</a>
+                        <a>Amazon Science</a>
+                </ul>
+                <ul>
+                    <p>Get to Know Us</p>
+                        <a>Careers</a>
+                        <a>Blog</a>
+                        <a>About Amazon</a>
+                        <a>Investor Relations</a>
+                        <a>Amazon Devices</a>
+                        <a>Amazon Science</a>
+                </ul>
+            </div>
+        </div>
+        <div class="footpanel3">
+            <div class="logo1">
+            </div>
+            <select class="language-footer">
+                <option>English</option>
+                <option>hindi</option>
+                <option>French</option>
+                <option>Chinese</option>
+                <option>Arabic</option>
+                <option>Roman</option>
+            </select>
+        </div>
+    </footer>
+    <script>
+        alert("In this Website only register , tutorials , Feedback , Giftcard , dropdown menu's , link tags , back to top works ")
+        function redirectToWebsite() {
+            window.location.href = "display-data.html", "_blank";
+        }
+        function redirectToWebsite1() {
+            window.location.href = "redirect_to_website.html", "_blank";
+        }
+        function homepage(){
+            window.location.href = "index.html", "_blank";
+        }
+        function redirectToWebsite2(){
+            window.location.href = "display-data copy.html", "_blank";
+        }
+        function redirectToWebsite3(){
+            window.location.href = "giftcard.html", "_blank";
+        }
+    </script>
+</body>
+</html>
